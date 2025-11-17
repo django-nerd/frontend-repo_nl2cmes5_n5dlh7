@@ -9,6 +9,7 @@ import Portfolio from './pages/Portfolio'
 import Process from './pages/Process'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Project from './pages/Project'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -22,6 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="process" element={<Process />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="projets/:slug" element={<Project />} />
         </Route>
         <Route path="/test" element={<Test />} />
       </Routes>

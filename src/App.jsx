@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import BookingModal from './components/BookingModal'
 
 const pageVariants = {
   initial: { opacity: 0, y: 12 },
@@ -36,6 +37,7 @@ export default function App() {
         </motion.main>
       </AnimatePresence>
       <Footer />
+      <BookingModal />
     </div>
   )
 }

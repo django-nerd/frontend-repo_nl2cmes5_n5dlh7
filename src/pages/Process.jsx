@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import SEO from './SEO'
 
 const steps = [
   { title: 'Cadrage', desc: 'Objectifs, audience, KPIs, scope' },
@@ -12,6 +13,7 @@ const steps = [
 export default function Process() {
   return (
     <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16">
+      <SEO title="Process – Melioram" description="Notre méthodologie premium : cadrage, design, développement, QA et lancement. Qualité et performance à chaque étape." />
       <motion.h1
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}

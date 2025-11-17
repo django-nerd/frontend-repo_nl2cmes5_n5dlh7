@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Layers, Brush, ChartBar, ShoppingBag } from 'lucide-react'
+import SEO from './SEO'
 
 const services = [
   { icon: Layers, title: 'Sites vitrines premium', desc: 'Design sur-mesure, performance et image de marque haut de gamme.' },
@@ -12,6 +13,7 @@ const services = [
 export default function Services() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <SEO title="Services – Melioram" description="Création de sites premium, identité de marque, e‑commerce et growth/SEO. Un accompagnement luxe digital orienté performance." />
       <motion.h1
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}

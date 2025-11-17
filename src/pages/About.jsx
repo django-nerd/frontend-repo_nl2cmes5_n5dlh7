@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
+import SEO from './SEO'
 
 export default function About() {
   const count = useMotionValue(0)
@@ -15,6 +16,7 @@ export default function About() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+      <SEO title="À propos – Melioram" description="Studio web premium alliant esthétique luxe et performance business. Basés sur l’exigence, la clarté et l’impact." />
       <motion.h1
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
