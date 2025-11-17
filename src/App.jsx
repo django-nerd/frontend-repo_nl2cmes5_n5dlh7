@@ -1,28 +1,41 @@
-import { useState } from 'react'
+import React from 'react'
+import { Outlet, useLocation } from 'react-router-dom'
+import { AnimatePresence, motion } from 'framer-motion'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
-function App() {
-  const [count, setCount] = useState(0)
+const pageVariants = {
+  initial: { opacity: 0, y: 12 },
+  in: { opacity: 1, y: 0 },
+  out: { opacity: 0, y: -12 },
+}
 
+const pageTransition = {
+  type: 'spring',
+  stiffness: 120,
+  damping: 20,
+  mass: 0.8,
+}
+
+export default function App() {
+  const location = useLocation()
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
+    <div className="min-h-screen bg-[#0A0A0A] text-neutral-100 selection:bg-yellow-500/20 selection:text-yellow-200">
+      <Navbar />
+      <AnimatePresence mode="wait">
+        <motion.main
+          key={location.pathname}
+          initial="initial"
+          animate="in"
+          exit="out"
+          variants={pageVariants}
+          transition={pageTransition}
+          className="pt-20"
+        >
+          <Outlet />
+        </motion.main>
+      </AnimatePresence>
+      <Footer />
     </div>
   )
 }
-
-export default App
