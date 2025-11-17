@@ -1,12 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Layers, Brush, ChartBar, ShoppingBag } from 'lucide-react'
+import { Layers, Brush, BarChart, ShoppingBag } from 'lucide-react'
 import SEO from './SEO'
 
 const services = [
   { icon: Layers, title: 'Sites vitrines premium', desc: 'Design sur-mesure, performance et image de marque haut de gamme.' },
   { icon: Brush, title: 'Identité & UI', desc: 'Systèmes visuels cohérents, typographies premium, composants élégants.' },
-  { icon: ChartBar, title: 'Growth & SEO', desc: 'Acquisition, contenus, optimisation on-site, tracking et analytics.' },
+  { icon: BarChart, title: 'Growth & SEO', desc: 'Acquisition, contenus, optimisation on-site, tracking et analytics.' },
   { icon: ShoppingBag, title: 'E-commerce', desc: 'Expériences d’achat fluides, conversion optimisée, intégrations.' },
 ]
 
