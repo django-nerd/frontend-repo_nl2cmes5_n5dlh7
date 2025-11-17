@@ -1,10 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { openBooking } from '../utils/booking'
+import SEO from './SEO'
 
 export default function Contact() {
   return (
     <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
+      <SEO title="Contact – Melioram" description="Parlez-nous de votre projet. Réservez un échange de 30 minutes pour cadrer vos objectifs et votre budget." />
       <motion.h1
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
